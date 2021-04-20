@@ -1,0 +1,269 @@
+:root {
+    --darkerRed: #2E1114;
+    --darkRed: #501B1D;
+    --darkPurple: #64485C;
+    --lightPurple: #83677B;
+    --lightGreen: #ADADAD;
+    --transition: .7s ease;
+    --fontSizeMedium: 3rem;
+    --max_percent: 100%;
+    --fontStyle: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: beige; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--lightGreen);
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: var(--lightGreen);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--darkerRed);
+    transition: var(--transition);
+}
+
+p {
+    line-height: 1.3;
+}
+
+li a {
+    transition: var(--transition);
+    color: var(--lightGreen);
+}
+
+li a:hover {
+    transition: var(--transition);
+    color: var(--darkerRed)
+}
+
+h2 {
+    font-size: var(--fontSizeMedium);
+    color: var(--lightGreen);
+    font-family: var(--fontStyle);
+    margin: 0 0 1rem 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: var(--max_percent);
+    height: 60px;
+    z-index: 5;
+    transition: var(--transition);
+}
+
+nav {
+    flex: 1;
+    align-self: center;
+    background-color: var(--lightPurple);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 30px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 600px;
+    height: 400px;
+}
+
+figcaption {
+    position: relative;
+    top: 20%;
+    left: 15px;
+    width: 500px;
+    height: 100px;
+}
+
+section {
+    width: var(--max_percent);
+    padding: 10rem 5rem;
+    position: relative;
+    float: left;
+}
+
+footer {
+    background-color: var(--lightPurple);
+    color: var(--lightGreen);
+    position: relative;
+    float: left;
+    width: var(--max_percent);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* .project-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+} */
+
+.justify-center {
+    justify-content: center;
+    padding: 2rem 0 6rem 0;
+  }
+
+.project-column {
+    margin-bottom: 1.5rem;
+    padding:0 1rem;
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 100%;
+    transition: flex-basis 500ms linear;
+  }
+
+  .project-column:first-child {
+    max-width: var(--max_percent);
+    flex: 0 0 100%;
+
+  }
+
+.project-column figcaption {
+    left: 0;
+    max-width: 500px;
+    width: var(--max_percent);
+    background: var(--lightPurple);
+    padding: 20px;
+    z-index: 1;
+    display: flex;
+    bottom: 0;
+    top: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.project-column figcaption h2 {
+    color: var(--white);
+}
+
+
+#about_section {
+    text-align: center;
+    transition: var(--transition);
+}
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#portfolio a {
+    transition: var(--transition);
+    color: var(--lightGreen);
+}
+
+#portfolio a:hover {
+    transition: var(--transition);
+    color: var(--darkerRed);
+}
+
+#small-intro {
+    position: absolute;
+    padding: 100px 100px 100px 65px;
+}
+
+
+@media (max-width: 576px) {
+
+    figure{
+        display: flex;
+    }
+
+    figcaption {
+        top: 8%;
+        left: 0px;
+        width: 90%;
+    }
+
+    section {
+        padding: 8rem 1rem;
+    }
+    
+    .project-column { 
+        flex: 0 0 100%;
+        max-width: var(--max_percent);
+    
+    }
+    .project-column figcaption {
+        width: var(--max_percent);
+        height: var(--max_percent);
+        padding:5%;
+    
+    }
+        
+     .project-column figcaption {
+        width: var(--max_percent);
+        height: auto;
+    }
+    
+    .project-column figcaption h2 {
+        margin: 0;
+    }
+    
+    .project-column figcaption p {
+        display: none;
+    }
+    
+}
+        
+     /* Landscape phone styles here */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 812px) 
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) { 
+      
+     
+
+      figcaption {
+        top: 5%;
+    
+      }
+    
+          
+      .project-column figcaption {
+        max-width: 100%;
+      }
+    
+      .project-column figcaption h2 {
+        margin: 0;
+    }
+    
+      .project-column figcaption p {
+        display: none;
+    }    
+    
+      .contact_section {
+        flex-direction: column;
+      }
+      .contact_text {
+          margin: 0px 5rem 3rem 0px;
+      }
+    
+    }
+    
